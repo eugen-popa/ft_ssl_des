@@ -6,11 +6,11 @@
 #    By: eupopa <eupopa@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/07 19:21:49 by nshuklin          #+#    #+#              #
-#    Updated: 2017/07/07 17:08:02 by eupopa           ###   ########.fr        #
+#    Updated: 2017/09/20 17:09:40 by eupopa           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	libftprintf.a
+NAME	=	libft.a
 
 SRC_L = ft_atoi.c \
 			ft_bzero.c \

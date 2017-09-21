@@ -6,13 +6,13 @@
 #    By: eupopa <eupopa@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/20 00:57:05 by eupopa            #+#    #+#              #
-#    Updated: 2017/09/20 14:38:39 by eupopa           ###   ########.fr        #
+#    Updated: 2017/09/20 17:19:04 by eupopa           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = ssl_des
 
-SRC = main.c
+SRC = main.c checker.c
 
 SRC_PATH = src/
 INCLUDES	= includes/
@@ -38,13 +38,15 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@make -C $(INCLUDES)
-	$(CC) $(CFLAGS) $(OBJ) -I$(INCLUDES) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) -I$(INCLUDES) -o $(NAME) -L./$(INCLUDES) -lft
 
 
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 	@mkdir -p $(OBJ_PATH)
 	$(CC) $(CFLAGS) -I$(INCLUDES) -I$(INCLUDES_PATH) -o $@ -c $< 
 
+test: $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -I$(INCLUDES) -o $(NAME) -L./$(INCLUDES) -lft
 
 clean:
 		rm -rf $(OBJ_PATH)
