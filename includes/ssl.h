@@ -6,7 +6,7 @@
 /*   By: eupopa <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/09/20 00:22:19 by eupopa            #+#    #+#             */
-/*   Updated: 2017/09/20 17:28:21 by eupopa           ###   ########.fr       */
+/*   Updated: 2017/09/25 15:58:19 by eupopa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,10 @@ typedef struct		s_base64
 	char 			o;
 	char 			*output_path;
 }					t_base64;
+
+
+void ft_incript	(char *line);
+void ft_decript	(char *line);
 
 #endif
 
